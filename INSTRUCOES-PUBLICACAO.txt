@@ -1,0 +1,19 @@
+PORTFÓLIO ADMINISTRATIVO — PUBLICAÇÃO NO GITHUB PAGES
+
+Endereço final esperado:
+https://alessandratriani.github.io/portfolio-adm/
+
+1. Extraia todo o conteúdo do arquivo ZIP.
+2. Abra o repositório https://github.com/alessandratriani/portfolio-adm
+3. Clique em Add file > Upload files.
+4. Arraste TODOS os arquivos e pastas extraídos para a área de envio.
+5. Clique em Commit changes.
+6. No repositório, abra Settings > Pages.
+7. Em Build and deployment, selecione Deploy from a branch.
+8. Escolha a branch main, a pasta /(root) e clique em Save.
+9. Aguarde alguns minutos e acesse o endereço final acima.
+
+Importante:
+- O arquivo index.html e a pasta assets precisam permanecer na raiz do repositório.
+- Não renomeie a pasta assets.
+- O site não depende da assinatura do ChatGPT depois que estiver publicado no GitHub Pages.
