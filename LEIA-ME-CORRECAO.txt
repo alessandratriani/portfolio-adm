@@ -1,0 +1,10 @@
+CORREÇÃO DA PÁGINA EM BRANCO
+
+1. Extraia os arquivos deste ZIP.
+2. No repositório portfolio-adm, clique em Add file > Upload files.
+3. Envie index.html, portfolio.js e portfolio.css para a raiz do repositório.
+4. Confirme a substituição do index.html e clique em Commit changes.
+5. Se .nojekyll não aparecer, crie-o diretamente no GitHub.
+6. Aguarde a publicação e atualize a página com Ctrl + F5.
+
+Não é necessário reenviar as imagens, o vídeo ou as fontes.
