@@ -1,81 +1,118 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#f1e5cf" />
-    <meta
-      name="description"
-      content="Portfólio profissional de Alessandra Triani: processos administrativos, controles em Excel, prototipagem e comunicação visual."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Alessandra Triani — Processos & Controles" />
-    <meta
-      property="og:description"
-      content="Processos administrativos, controles em Excel e soluções aplicadas."
-    />
-    <meta
-      property="og:url"
-      content="https://alessandratriani.github.io/portfolio-adm/"
-    />
-    <meta
-      property="og:image"
-      content="https://alessandratriani.github.io/portfolio-adm/og.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://alessandratriani.github.io/portfolio-adm/" />
-    <link rel="icon" href="/portfolio-adm/favicon.svg" type="image/svg+xml" />
-    <title>Alessandra Triani — Processos &amp; Controles</title>
 
-    <!-- Google Analytics + exclusão dos acessos da proprietária -->
+    <!-- Identifica os navegadores da proprietária e desativa o Analytics neles -->
     <script>
       (function () {
-        const OWNER_KEY = "portfolio_owner_device";
+        const measurementId = "G-34H6B88D02";
+        const ownerKey = "portfolio_owner_device";
+
         const params = new URLSearchParams(window.location.search);
         const ownerParam = params.get("owner");
 
         if (ownerParam === "1") {
-          localStorage.setItem(OWNER_KEY, "1");
-        } else if (ownerParam === "0") {
-          localStorage.removeItem(OWNER_KEY);
+          localStorage.setItem(ownerKey, "1");
+        }
+
+        if (ownerParam === "0") {
+          localStorage.removeItem(ownerKey);
+        }
+
+        if (localStorage.getItem(ownerKey) === "1") {
+          window["ga-disable-" + measurementId] = true;
         }
 
         if (ownerParam === "1" || ownerParam === "0") {
           params.delete("owner");
-          const cleanQuery = params.toString();
+
+          const query = params.toString();
           const cleanUrl =
             window.location.pathname +
-            (cleanQuery ? "?" + cleanQuery : "") +
+            (query ? "?" + query : "") +
             window.location.hash;
+
           window.history.replaceState({}, document.title, cleanUrl);
-        }
-
-        const isOwner = localStorage.getItem(OWNER_KEY) === "1";
-
-        if (!isOwner) {
-          window.dataLayer = window.dataLayer || [];
-          window.gtag = function () {
-            window.dataLayer.push(arguments);
-          };
-
-          window.gtag("js", new Date());
-          window.gtag("config", "G-34H6B88D02");
-
-          const analyticsScript = document.createElement("script");
-          analyticsScript.async = true;
-          analyticsScript.src =
-            "https://www.googletagmanager.com/gtag/js?id=G-34H6B88D02";
-          document.head.appendChild(analyticsScript);
         }
       })();
     </script>
 
-    <script type="module" crossorigin src="/portfolio-adm/portfolio-v4.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-adm/portfolio-v4.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34H6B88D02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-34H6B88D02");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f1e5cf" />
+
+    <meta
+      name="description"
+      content="Portfólio profissional de Alessandra Triani: processos administrativos, controles em Excel, prototipagem e comunicação visual."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="Alessandra Triani — Processos & Controles"
+    />
+
+    <meta
+      property="og:description"
+      content="Processos administrativos, controles em Excel e soluções aplicadas."
+    />
+
+    <meta
+      property="og:url"
+      content="https://alessandratriani.github.io/portfolio-adm/"
+    />
+
+    <meta
+      property="og:image"
+      content="https://alessandratriani.github.io/portfolio-adm/og.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="canonical"
+      href="https://alessandratriani.github.io/portfolio-adm/"
+    />
+
+    <link
+      rel="icon"
+      href="/portfolio-adm/favicon.svg"
+      type="image/svg+xml"
+    />
+
+    <title>Alessandra Triani — Processos &amp; Controles</title>
+
+    <script
+      type="module"
+      crossorigin
+      src="/portfolio-adm/portfolio-v4.js">
+    </script>
+
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="/portfolio-adm/portfolio-v4.css"
+    />
+
   </head>
+
   <body>
-  <div id="root"></div>
-</body>
+    <div id="root"></div>
+  </body>
+
 </html>
